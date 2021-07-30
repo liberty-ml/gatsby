@@ -1,150 +1,167 @@
 import * as React from "react"
 import { StaticImage } from 'gatsby-plugin-image'
-
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+import { Link } from "gatsby"
+//import Header from './header.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Container, Row, Col } from 'react-bootstrap';
+import Layout from '../components/layout'
+import * as styles from './index.module.scss'
+import CountUp from 'react-countup';
+import { Scroll } from 'react-fns';
 
 // markup
 const IndexPage = () => {
+
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Hi Mike!
-        <br />
-        <span style={headingAccentStyles}>— this is my first Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <StaticImage
-        alt="A cool brain made out of tracers"
-        src="../images/brain.png"
-      />
-    </main>
+    <Layout pageTitle="Home Page" page="home">
+      <div className={styles.hero}>
+        <h1>SOVEREIGN</h1>
+        <h2>Share your risk. Own your future.</h2>
+        <fieldset>
+          <input type="text" placeholder="Enter Zip Code"/>
+          <>
+            <div className="mb-2">
+              <Button variant="primary" size="xxl">
+                Shop
+              </Button>{' '}
+            </div>
+          </>
+        </fieldset>
+      </div>
+      <div className={styles.coop}>
+        <Container>
+          <Row>
+            <h1>Working Together for Peace of Mind</h1>
+            <h2>Sovereign's cooperative approach to insurance and investing</h2>
+          </Row>
+          <Row className={styles.howItWorks}>
+            <Col>
+              <StaticImage
+                className="columnIcon"
+                alt="Basquiat Crown"
+                src="../images/premium.png"
+              />
+              <span>Pay your premium like with any other insurance product. Sovereign keeps a flat fee and adds the rest to a pool that we use to cover everyone's claims.</span>
+            </Col>
+            <Col>
+              <StaticImage
+                className="columnIcon"
+                alt="Basquiat Crown"
+                src="../images/moment.png"
+              />
+              <span>We process most claims within moments of notification. Unlike other companies, we have no incentive to withhold anything.</span>
+            </Col>
+            <Col>
+              <StaticImage
+                className="columnIcon"
+                alt="Basquiat Crown"
+                src="../images/choice.png"
+              />
+              <span>For every dollar you spend with us you earn patronage. People like you vote annually to either convert patronage to a cash rebate or equity in Sovereign.</span>
+            </Col>
+          </Row>
+          <Row className={styles.ctaBlock}>
+            <Col>
+              <h2>Think that spreading out risk is just the beginning? Then you think right. <Link to="/community">Learn more</Link> about the benefits our cooperative community members enjoy.</h2>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div className={styles.assessment}>
+        <Container>
+          <Row>
+            <Col>
+            <Scroll
+              render={({ x, y }) => (
+                <div>
+                  {y>400&&
+                    <CountUp
+                      start={0}
+                      end={77568.012}
+                      duration={10}
+                      decimal="."
+                      separator=","
+                      prefix="$"
+                    />
+                  }
+                </div>
+              )}
+            />
+            </Col>
+            <Col>
+              <h1>What's your exposure?</h1>
+              <h4>Before you shop for a solution, understand the problem. Let's measure your exposure, then find the package of insurance solutions that addresses it.</h4>
+              <>
+                <div className="mb-2">
+                  <Button variant="primary" size="xxl">
+                    Assess My Risk
+                  </Button>{' '}
+                </div>
+              </>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div className={styles.agents}>
+        <Row>
+         <Col><span className={styles.pang}>WAY....</span></Col>
+         <Col><span className={styles.ping}>WAY....</span></Col>
+         <Col><span className={styles.pong}>WAY....</span></Col>
+        </Row>
+        <Row>
+          <Col><h2>....beyond your traditional insurance agents (could we be any more clear?)</h2></Col>
+        </Row>
+        <Row>
+          <Col>
+            <p>We're changing the game and providing all our members with their own advocate backed by a team of professionals, not just from the insurance world but accounting, legal, and financial. What are you waiting for?</p>
+          </Col>
+        </Row>
+        <Row>
+        <Col>
+          <>
+            <style type="text/css">
+              {`
+
+              .btn-primary {
+                background-color: #902bf5;
+                border-color: #902bf5;
+                color: white;
+                font-size: 24px;
+                outline: none;
+              }
+
+              .btn-primary:hover {
+                background-color: #ff01ff;
+                border-color: #ff01ff;
+                outline: none;
+              }
+
+              .btn {
+                margin: 0px auto;
+                display:block;
+              }
+              `}
+            </style>
+            <div className="mb-2">
+              <Link to='/agents'><Button variant="primary" size="xxl">
+                Connect with an Advocate
+              </Button>{' '}
+              </Link>
+            </div>
+          </>
+        </Col>
+        </Row>
+      </div>
+    </Layout>
   )
 }
 
 export default IndexPage
+
+/*
+<Button variant="primary">Click Me!</Button>
+<StaticImage
+  alt="A cool brain made out of tracers"
+  src="../images/brain.png"
+/>
+*/

@@ -1,0 +1,145 @@
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$primary: #902bf5;
+$secondary: #fc7b54;
+
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -70px;
+}
+
+footer,
+.push {
+  height: 70px;
+}
+
+body > div:first-child, body > div:first-child > div {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+.inverse {
+  .logoImage {
+    //background: url('../images/crown_white.png') no-repeat top left;
+
+    img {
+      //width:60px;
+      //height:60px;
+      //position:inherit;
+    }
+  }
+}
+
+.primary {
+
+}
+
+input {
+  padding: 1em .375em .8125em;
+  left: 1px;
+  font-size: 1.75rem;
+  -webkit-transition: opacity .1s ease-out 0s;
+  transition: opacity .1s ease-out 0s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: 3px;
+  text-overflow: ellipsis;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #919191;
+  background-color: #fff;
+  color: #343741;
+}
+
+footer {
+  background-color: $primary;
+  color: #ffffff;
+  padding-top:15px;
+  .logoImage {
+    width:60px;
+    display:block;
+    //float:left;
+    margin:auto;
+
+  }
+}
+
+a {
+  color: $primary;
+  &:hover {
+    color: #ff01ff;
+  }
+}
+
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  color: $white;
+  padding: 20px 20px;
+  a {
+    text-decoration: none;
+  }
+  .logoContainer {
+    display: block;
+    float: left;
+  }
+  .logoImage {
+    width:60px;
+    display:block;
+    float:left;
+    margin-right:10px;
+    margin-top:8px;
+  }
+  .logoName {
+    font-family: 'Knewave', sans-serif;
+    font-size: 36px;
+    float:left;
+  }
+
+  li {
+    float: left;
+    font-size: 24px;
+    &:not(:last-child) {
+      margin-right:20px;
+    }
+    &:not(:last-child) {
+      margin-top: 8px;
+    }
+  }
+
+  a, li, span, button {
+    color: $white;
+    font-family: "Oxygen", sans-serif;
+  }
+  nav {
+    float:right;
+    ul {
+      list-style: none;
+    }
+  }
+  span {
+    //display: none;
+  }
+}

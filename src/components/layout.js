@@ -34,11 +34,8 @@ const Layout = ({ pageTitle, children, page }) => {
         <header className={styles.header}>
           <title>{pageTitle}</title>
           <div className={styles.logoContainer}>
-            <StaticImage
-              className={styles.logoImage}
-              alt="Basquiat Crown"
-              src="../images/crown_white.png"
-            />
+            <span className={styles.logoImage}> </span>
+
             <span className={styles.logoName}>SOVEREIGN</span>
           </div>
           <nav>
@@ -46,7 +43,7 @@ const Layout = ({ pageTitle, children, page }) => {
               <li><Link to="/menu">Shop</Link></li>
               <li><Link to="/community">Community</Link></li>
               <li><Link to="/assessment">Assessment</Link></li>
-              <li><Link to="/agents">Find Agent</Link></li>
+              <li><Link to="/agents">Connect</Link></li>
               <li><Link to="/"><Button variant="primary">My Account</Button></Link></li>
             </ul>
           </nav>

@@ -1,0 +1,70 @@
+@import '../components/layout.module.scss';
+
+.hero {
+  padding-top:200px;
+  padding-bottom:100px;
+  .container {
+    width:940px;
+    margin:auto;
+  }
+  h1, h2 {
+    text-align:center;
+  }
+  h1 {
+    margin-bottom: 60px;
+  }
+  p {
+    font-size: 18px;
+    text-align:center;
+  }
+}
+
+.packages {
+  background-color: #F8F8F8;
+  border-bottom:#333333;
+  padding: 50px 0px 50px;
+  float:left;
+  width:100%;
+  .container {
+    h1 {
+      font-weight: lighter;
+      margin-bottom: 10px;
+      text-align:center;
+    }
+    & > p {
+      text-align:center;
+      margin-bottom:20px;
+      font-size:24px;
+    }
+    width:940px;
+    margin:auto;
+    .card {
+      width: 300px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      padding:10px;
+      &:not(:last-child) {
+        margin-right:20px;
+      }
+      background-color: $white;
+      height: 300px;
+      float:left;
+      ul {
+        margin-bottom:2px;
+      }
+      p {
+        font-style: italic;
+        margin-left: 15px;
+        margin-top:2px;
+        text-align: center;
+      }
+      a, button {
+        display:block;
+        margin:auto;
+        text-decoration:none;
+      }
+      button {
+        width:100%;
+      }
+    }
+  }
+}

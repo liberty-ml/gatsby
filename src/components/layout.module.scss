@@ -37,19 +37,38 @@ main {
 }
 
 .inverse {
-  .logoImage {
-    //background: url('../images/crown_white.png') no-repeat top left;
-
-    img {
-      //width:60px;
-      //height:60px;
-      //position:inherit;
+  .header {
+    .logoImage {
+      background-image: url("../images/crown_white.png");
+    }
+    a {
+      color: $primary;
+      &:hover {
+        color: #ff01ff;
+      }
+    }
+    a, li, span, button {
+      color: $white;
     }
   }
 }
 
 .primary {
+  .header {
+    .logoImage {
+      background-image: url("../images/crown_black.png");
+    }
+    a, li, span {
+      color: $black;
+    }
+    a:hover {
+      color: #ff01ff;
+    }
+  }
+}
 
+button {
+  color:$white;
 }
 
 input {
@@ -83,13 +102,6 @@ footer {
   }
 }
 
-a {
-  color: $primary;
-  &:hover {
-    color: #ff01ff;
-  }
-}
-
 .header {
   background-color: transparent;
   position: absolute;
@@ -107,10 +119,14 @@ a {
   }
   .logoImage {
     width:60px;
+    height:60px;
     display:block;
     float:left;
-    margin-right:10px;
-    margin-top:8px;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    background-position: left top;
+    margin-top: -5px;
+    margin-right: 10px;
   }
   .logoName {
     font-family: 'Knewave', sans-serif;
@@ -130,7 +146,6 @@ a {
   }
 
   a, li, span, button {
-    color: $white;
     font-family: "Oxygen", sans-serif;
   }
   nav {

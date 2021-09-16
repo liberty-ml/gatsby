@@ -1,23 +1,5 @@
-// Required
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-
-$primary: #902bf5;
-$secondary: #fc7b54;
-
-@import "../../node_modules/bootstrap/scss/root";
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/type";
-
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
 .wrapper {
   min-height: 100%;
-
   /* Equal to height of footer */
   /* But also accounting for potential margin-bottom of last child */
   margin-bottom: -70px;
@@ -42,13 +24,13 @@ main {
       background-image: url("../images/crown_white.png");
     }
     a {
-      color: $primary;
+      //color: $primary;
       &:hover {
         color: #ff01ff;
       }
     }
     a, li, span, button {
-      color: $white;
+      //color: $white;
     }
   }
 }
@@ -59,7 +41,7 @@ main {
       background-image: url("../images/crown_black.png");
     }
     a, li, span {
-      color: $black;
+      //color: $black;
     }
     a:hover {
       color: #ff01ff;
@@ -68,7 +50,7 @@ main {
 }
 
 button {
-  color:$white;
+  //color:$white;
 }
 
 input {
@@ -90,7 +72,7 @@ input {
 }
 
 footer {
-  background-color: $primary;
+  //background-color: $primary;
   color: #ffffff;
   padding-top:15px;
   .logoImage {
@@ -108,7 +90,7 @@ footer {
   top: 0;
   left: 0;
   width:100%;
-  color: $white;
+  //color: $white;
   padding: 20px 20px;
   a {
     text-decoration: none;

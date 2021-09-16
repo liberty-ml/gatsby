@@ -1,0 +1,15 @@
+
+.container {
+  padding-top: 50px;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+h4 {
+  &.sectionTitle {
+    text-align: right;
+    margin-right:25px;
+  }
+}

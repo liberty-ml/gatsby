@@ -1,0 +1,247 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+
+$bright-purple: #BB80F7;
+$light-purple: #A454F6;
+$purple: #8F2BF5;
+$dark-purple: #7E0DF1;
+$deep-purple: #6404C7;
+$svn-orange: #FFCC1C;
+$svn-green: #CBFE18;
+
+$gray-700: #343741;
+$gray-600: #5D5F67;
+$gray-500: #7D7F86;
+$gray-400: #BEBFC2;
+$gray-300: #BEBFC2;
+$gray-200: #EFEFF0;
+$gray-100: #F7F7F8;
+
+$red: #D32F2F;
+$light-red: #FFF4F5;
+$green: #00EE00;
+$light-green: #E1F2E6;
+$yellow: #FFD000;
+$light-yellow: #FFF6CC;
+
+.bg-bright-purple {
+  background-color: $bright-purple;
+}
+
+.bg-light-purple {
+  background-color: $light-purple;
+}
+
+.bg-purple {
+  background-color: $purple;
+}
+
+.bg-dark-purple {
+  background-color: $dark-purple;
+}
+
+.bg-deep-purple {
+  background-color: $deep-purple;
+}
+
+.bg-svn-orange {
+  background-color: $svn-orange;
+}
+
+.bg-svn-green {
+  background-color: $svn-green;
+}
+
+.bg-gray-700 {
+  background-color: $gray-700;
+}
+
+.bg-gray-600 {
+  background-color: $gray-600;
+}
+
+.bg-gray-500 {
+  background-color: $gray-500;
+}
+
+.bg-gray-400 {
+  background-color: $gray-400;
+}
+
+.bg-gray-300 {
+  background-color: $gray-300;
+}
+
+.bg-gray-200 {
+  background-color: $gray-200;
+}
+
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-light-red {
+  background-color: $light-red;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.bg-light-green {
+  background-color: $light-green;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-light-yellow {
+  background-color: $light-yellow;
+}
+
+.bright-purple {
+  color: $bright-purple;
+}
+
+.light-purple {
+  color: $light-purple;
+}
+
+.purple {
+  color: $purple;
+}
+
+.dark-purple {
+  color: $dark-purple;
+}
+
+.deep-purple {
+  color: $deep-purple;
+}
+
+.svn-orange {
+  color: $svn-orange;
+}
+
+.svn-green {
+  color: $svn-green;
+}
+
+.gray-700 {
+  color: $gray-700;
+}
+
+.gray-600 {
+  color: $gray-600;
+}
+
+.gray-500 {
+  color: $gray-500;
+}
+
+.gray-400 {
+  color: $gray-400;
+}
+
+.gray-300 {
+  color: $gray-300;
+}
+
+.gray-200 {
+  color: $gray-200;
+}
+
+.gray-100 {
+  color: $gray-100;
+}
+
+.red {
+  color: $red;
+}
+
+.light-red {
+  color: $light-red;
+}
+
+.green {
+  color: $green;
+}
+
+.light-green {
+  color: $light-green;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.light-yellow {
+  color: $light-yellow;
+}
+
+.white {
+  color: white;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, p, small, strong {
+  color: $gray-700;
+}
+
+h2, h3, h4, p, small, strong, span {
+  font-family: "Oxygen", sans-serif;
+}
+
+h1 {
+  font-family: 'Knewave', sans-serif;
+  font-size: 4.5em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2.25em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+p, strong, ::placeholder {
+  font-size: 1em;
+}
+
+small {
+  font-size: .75em;
+}
+
+::placeholder {
+  color: $gray-500
+}
+
+a {
+  color: $dark-purple;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  border-top: 3px solid $gray-400;
+}

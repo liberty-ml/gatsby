@@ -12,7 +12,7 @@ const IndexPage = () => {
 
   return (
     <Layout pageTitle="Home Page" page="home">
-      
+
     </Layout>
   )
 }

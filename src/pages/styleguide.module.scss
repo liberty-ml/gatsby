@@ -3,13 +3,16 @@
   padding-top: 50px;
 }
 
-h2 {
-  margin-bottom: 50px;
-}
-
 h4 {
+  &.fullSectionTitle {
+    text-align:l left;
+  }
   &.sectionTitle {
     text-align: right;
     margin-right:25px;
   }
+}
+
+.searchBars {
+  margin-bottom:20px;
 }

@@ -4,6 +4,9 @@
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/forms/floating-labels";
+@import "../../node_modules/bootstrap/scss/forms/form-select";
+
 
 $bright-purple: #BB80F7;
 $light-purple: #A454F6;
@@ -202,7 +205,7 @@ h1, h2, h3, h4, p, small, strong {
   color: $gray-700;
 }
 
-h2, h3, h4, p, small, strong, span {
+h2, h3, h4, p, small, strong, span, label {
   font-family: "Oxygen", sans-serif;
 }
 
@@ -223,25 +226,76 @@ h4 {
   font-size: 1.5em;
 }
 
-p, strong, ::placeholder {
+p, strong, ::placeholder, label {
   font-size: 1em;
+}
+
+p {
+  margin-bottom:0px;
+}
+
+strong {
+  font-weight: 700;
 }
 
 small {
   font-size: .75em;
 }
 
-::placeholder {
+::placeholder, .form-floating > label {
   color: $gray-500
 }
 
 a {
   color: $dark-purple;
   &:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
+    color: $dark-purple;
   }
 }
 
 hr {
   border-top: 3px solid $gray-400;
+}
+
+/*
+.form-check-input {
+  width: 2em;
+  margin-right:1em;
+}
+
+.form-check > label {
+  padding-top: .25em;
+}
+
+input[type="checkbox"]:focus {
+  border-color: rgba(164, 84, 246, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(164, 84, 246, 0.6);
+  outline: 0 none;
+}
+
+input:checked {
+  background-color: $purple;
+}
+
+.checkbox label:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.checkbox .cr {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #a9a9a9;
+  border-radius: .25em;
+  width: 1.3em;
+  height: 1.3em;
+  float: left;
+  margin-right: .5em;
+}
+*/
+
+.MuiButton-contained {
+  color: white !important;
 }

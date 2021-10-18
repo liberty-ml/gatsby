@@ -1,0 +1,25 @@
+@import "../styles/app.scss";
+
+.formCheckLabel, .formCheckInput {
+  float: left;
+}
+
+.formCheckInput {
+  margin-left: .5em !important;
+  margin-right: .5em !important;
+  width: 3.5em !important;
+}
+
+.formCheckLabel {
+  margin-top: .4em;
+}
+
+.formCheckInput {
+  &:checked {
+    background-color: $purple;
+    border-color: $purple;
+  }
+  &:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(164, 84, 246, 0.6);
+  }
+}

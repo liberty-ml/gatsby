@@ -1,0 +1,20 @@
+.footerContainer {
+  background-color: black;
+  padding-bottom: 10px;
+  height: 90px;
+  small {
+    color: white;
+  }
+  .newsletterInput, .newsletterSubmit {
+    //display:inline-block!important;
+  }
+  .newsletterSubmit {
+    //margin-left: 10px;
+    //margin-top: -10px;
+  }
+
+  .footerLogo {
+    float: right;
+    margin-right:20px;
+  }
+}

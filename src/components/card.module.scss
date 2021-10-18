@@ -1,0 +1,21 @@
+@import "../styles/app.scss";
+
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.card {
+  border: 1px solid $gray-400;
+  width: 100%;
+  padding: 30px 20px;
+  box-shadow: 0 2px 2px 0 #BEBFC2;
+  border-radius: 4px;
+  text-decoration: none !important;
+  &:hover {
+    box-shadow: 0 2px 3px 0 #5D5F67;
+    cursor: pointer;
+  }
+}

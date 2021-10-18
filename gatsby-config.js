@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const path = require(`path`)
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -15,17 +17,28 @@ module.exports = {
         spaceId: process.env.SPACE_ID
       },
     },
+    "gatsby-image",
+    `gatsby-plugin-image`,
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        google: {
-          families: ['Knewave', 'Roboto', 'Oxygen']
-        }
-      }
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          'Knewave\:400',
+          'Roboto\:400,700',
+          'Oxygen\:400,700'
+        ],
+      },
     }
   ],
 };

@@ -4,26 +4,27 @@ import '../styles/app.scss'
 import './styleguide.module.scss'
 import { Container, Row, Col } from 'react-bootstrap';
 import * as styles from './styleguide.module.scss'
-import { Swatch } from '../components/swatch'
-import { TextInput } from '../components/textInput'
-import { Checkbox } from '../components/checkbox'
-import { Select } from '../components/select'
-import { Switch } from '../components/switch'
-import { SvrnButton } from '../components/svrnButton'
-import { Search } from '../components/search'
-import { Tooltip } from '../components/tooltip'
-import { Logo } from "../components/logo"
-import { Alert } from "../components/alert"
-import { Loader } from "../components/loader"
-import { Progress } from "../components/progress"
-import { Aside } from "../components/aside"
-import { Card } from "../components/card"
-import { Thumbnail } from "../components/thumbnail"
-import { Video } from "../components/video"
-import { CardList } from "../components/cardList"
-import { SvrnCarousel } from "../components/svrnCarousel"
-import { Header } from "../components/header"
-import { Footer } from "../components/footer"
+import { Swatch } from '../components/swatch/swatch'
+import { TextInput } from '../components/textInput/textInput'
+import { Checkbox } from '../components/checkbox/checkbox'
+import { Select } from '../components/select/select'
+import { Switch } from '../components/switch/switch'
+import { SvrnButton } from '../components/svrnButton/svrnButton'
+import { Search } from '../components/search/search'
+import { Tooltip } from '../components/tooltip/tooltip'
+import { Logo } from "../components/logo/logo"
+import { Alert } from "../components/alert/alert"
+import { Loader } from "../components/loader/loader"
+import { Progress } from "../components/progress/progress"
+import { Aside } from "../components/aside/aside"
+import { Card } from "../components/card/card"
+import { Thumbnail } from "../components/thumbnail/thumbnail"
+import { Video } from "../components/video/video"
+import { CardList } from "../components/cardList/cardList"
+import { SvrnCarousel } from "../components/svrnCarousel/svrnCarousel"
+import { Header } from "../components/header/header"
+import { Footer } from "../components/footer/footer"
+import { Slider } from "../components/slider/slider"
 
 
 import { useState, useEffect } from "react";
@@ -245,7 +246,7 @@ export default function Styleguide() {
         <Col lg="10">
           <Row>
             <Col>
-              <a href="#">{page.copyText}</a>
+              <a href="./index">{page.copyText}</a>
             </Col>
           </Row>
           <Row>
@@ -369,6 +370,16 @@ export default function Styleguide() {
                   <SvrnButton inverse="inverse" size="large">Large</SvrnButton>
                  </Col>
               </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row style={rowStyle}>
+        <Col lg="6">
+          <Row>
+            <Col lg="4"><h4 className={styles.sectionTitle}>Slider</h4></Col>
+            <Col lg="8">
+              <Slider min={0} max={100} value={50} />
             </Col>
           </Row>
         </Col>

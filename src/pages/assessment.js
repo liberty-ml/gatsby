@@ -1,6 +1,6 @@
 import * as React from "react"
 //import Header from './header.js'
-import Layout from '../components/layout'
+import Layout from './layout'
 
 export default function Assessment() {
   return (

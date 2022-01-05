@@ -13,6 +13,10 @@ interface SearchProps extends PropsWithChildren<any> {
       event: FocusEvent<any>
     ) => void
 
+    onChange?: (
+      event: ChangeEvent<any>
+    ) => void
+
     id: string
 
     inverse?: "inverse" | "primary"
@@ -29,10 +33,10 @@ export function Search({
 
     return (
 
-      <div className={classnames(styles.searchContainer, styles[value], classNames)}>
-        <input className={styles.search} onFocus={() => setValue('focused')} onBlur={() => setValue('blurred')} placeholder="Enter search query" />
+      <form className={classnames(styles.searchContainer, styles[value], classNames)} role="search">
+        <input className={styles.search} onFocus={() => setValue('focused')} onBlur={() => setValue('blurred')} placeholder="Enter search query" onChange={(e) => onChange(e.target)} />
         <SvrnButton inverse={inverse}>Search</SvrnButton>
-      </div>
+      </form>
     )
 
 }

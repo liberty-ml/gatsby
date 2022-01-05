@@ -1,7 +1,9 @@
+// Only one banner
+import React from 'react';
 import { render, screen } from '@testing-library/react'
-import Styleguide from '../../pages/styleguide'
 
-describe("Sovereign Carousel", () => {
+describe("Assessment", () => {
+
   it("renders correctly", () => {
 
   })

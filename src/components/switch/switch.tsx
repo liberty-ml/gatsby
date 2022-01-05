@@ -29,9 +29,9 @@ export function Switch({
 
     return (
 
-      <div className={classnames("form-check form-switch", classNames)}>
+      <div role="switch" className={classnames("form-check form-switch", classNames)}>
         <label className={classnames(styles.formCheckLabel, "form-check-label")} htmlFor="flexSwitchCheckDefault">Option 1</label>
-        <input className={classnames(styles.formCheckInput, "form-check-input")} type="checkbox" id="flexSwitchCheckDefault" />
+        <input className={classnames(styles.formCheckInput, "form-check-input")} type="checkbox" id="flexSwitchCheckDefault" onChange={(e) => onChange(e.target)} />
         <label className={classnames(styles.formCheckLabel, "form-check-label")} htmlFor="flexSwitchCheckDefault">Option 2</label>
       </div>
     )

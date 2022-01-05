@@ -23,7 +23,7 @@ export function Logo({
 }: LogoProps): ReactElement {
 
     return (
-      <span className={classnames(styles.logo, styles[inverse], styles[size], classNames)}></span>
+      <span role="img" aria-label="logo" className={classnames(styles.logo, styles[inverse], styles[size], classNames)}></span>
     )
 
 }

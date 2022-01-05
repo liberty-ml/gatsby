@@ -23,7 +23,7 @@ export function Header({
 }: HeaderProps): ReactElement {
 
     return (
-      <header className={classnames(styles[inverse], classNames)}>
+      <header className={classnames(styles[inverse], classNames)} role="banner">
         <Row className={classnames(styles.primaryHeader, styles[inverse])}>
           <Col lg="3" className={styles.logoContainer}>
             <Logo classNames={styles.headerLogo} inverse={inverse} />

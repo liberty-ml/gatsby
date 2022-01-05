@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, {useState} from 'react'
 import {PropsWithChildren, ReactElement} from 'react'
 import classnames from 'classnames'
 import * as styles from './checkbox.module.scss'
@@ -18,6 +18,8 @@ interface CheckboxProps extends PropsWithChildren<any> {
     type: "radio" | "checkbox"
 
     name: string
+
+    checked: boolean
 }
 
 export function Checkbox({
@@ -27,8 +29,22 @@ export function Checkbox({
     disabled = false,
     id,
     type,
+    checked = false,
     children
 }: CheckboxProps): ReactElement {
+  const [state, setState] = useState({
+    checked: checked
+  })
+
+  let self = this
+
+    const toggle = (
+          event: React.ChangeEvent<HTMLSelectElement>
+      ): void => {
+        setState({
+          checked: !state.checked
+        })
+    }
 
     function camelize(str) {
       return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
@@ -39,13 +55,13 @@ export function Checkbox({
     return (
 
       <div className={classnames(styles.formCheck, "form-check", classNames)}>
-        <input className={classnames(styles.formCheckInput, "form-check-input")} type={type} name={name} value={camelize(children)} id={camelize(children)} disabled={disabled} onChange={(e) => onChange(e.target)} />
+        <input data-testid="cb" className={classnames(styles.formCheckInput, "form-check-input")} checked={state.checked} aria-checked={state.checked} type={type} role={type} name={name} value={camelize(children)} id={camelize(children)} disabled={disabled} onChange={toggle} />
         <label className={classnames(styles.formCheckLabel, "form-check-label")} htmlFor={camelize(children)}>
           {children}
         </label>
       </div>
     )
-
 }
+
 
 Checkbox.displayName = 'Checkbox'

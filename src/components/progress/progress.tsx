@@ -24,7 +24,7 @@ export function Progress({
 
 
     return (
-      <div style={{ width: size, height: size }}>
+      <div style={{ width: size, height: size }} role="progressbar" aria-valuenow={percentage} aria-valuemin="0" aria-valuemax="100">
         <CircularProgressbar
           value={percentage}
           text={`${percentage}%`}

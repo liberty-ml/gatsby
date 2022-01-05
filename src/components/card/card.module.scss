@@ -8,14 +8,64 @@ a {
 }
 
 .card {
+  &.hide {
+    display: none;
+  }
+  &.show {
+    display: flex;
+  }
+  padding:30px 20px!important;
+  min-height: 130px;
+  & > * {
+    position:relative!important;
+  }
+}
+
+.card .text {
+  display: flex;
+}
+
+.card, .card .text {
+  flex-direction: column;
+}
+
+.card .text {
+  flex-grow: 1;
+}
+
+.card .text > * + * {
+  margin-top: 0.75rem;
+}
+
+.card .text :last-child {
+  margin-top: auto;
+}
+
+.card .text :nth-last-child(2) {
+  margin-bottom: 0.75rem;
+}
+
+.card {
   border: 1px solid $gray-400;
-  width: 100%;
-  padding: 30px 20px;
+  //padding: 30px 20px;
   box-shadow: 0 2px 2px 0 #BEBFC2;
   border-radius: 4px;
   text-decoration: none !important;
+  list-style: none;
   &:hover {
     box-shadow: 0 2px 3px 0 #5D5F67;
     cursor: pointer;
   }
+
+}
+
+.card + .card {
+    margin-top: 1.5rem;
+}
+
+@supports (display: grid) {
+
+    .card + .card {
+        margin-top: 0;
+    }
 }

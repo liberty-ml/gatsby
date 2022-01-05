@@ -1,8 +1,12 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react'
-import Styleguide from '../../pages/styleguide'
+import { Header } from './header'
 
 describe("Header", () => {
   it("renders correctly", () => {
+    render(<Header />)
 
+    const header = screen.getByRole('banner')
+    expect(header).toBeTruthy()
   })
 })

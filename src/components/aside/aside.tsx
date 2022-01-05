@@ -11,20 +11,23 @@ interface AsideProps extends PropsWithChildren<any> {
     id: string
 
     header: string
+
+    label: label
 }
 
 export function Aside({
     classNames  = '',
     id,
     header,
+    label,
     children
 }: AsideProps): ReactElement {
 
     return (
-      <div className={styles.aside}>
-        <h4>{header}</h4>
+      <aside className={styles.aside} role="complementary" aria-label={label}>
+        <h4 data-testid="header">{header}</h4>
         <p>{children}</p>
-      </div>
+      </aside>
     )
 
 }

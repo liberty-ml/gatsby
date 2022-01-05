@@ -13,7 +13,7 @@ export const Select = ({...props
   })
 
   return (
-    <div className="form-floating">
+    <div className="form-floating" role="listbox">
       <select className={classnames("form-select", props.classNames)} id="floatingSelect" aria-label="Floating label select example">
         <option defaultValue>Open this select menu</option>
         {menuOptions}

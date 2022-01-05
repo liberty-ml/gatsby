@@ -1,0 +1,19 @@
+.dialogModal {
+  p {
+    font-size: 16px;
+  }
+  .modalHeader {
+    button {
+      display: none!important;
+    }
+  }
+  .modalFooter {
+    button {
+      margin: 0px!important;
+      float: right;
+      &:first-child {
+        margin-right:10px!important;
+      }
+    }
+  }
+}

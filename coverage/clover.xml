@@ -1,6 +1,272 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1636121104566" clover="3.2.0">
-  <project timestamp="1636121104566" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1641331192263" clover="3.2.0">
+  <project timestamp="1641331192263" name="All files">
+    <metrics statements="122" coveredstatements="87" conditionals="52" coveredconditionals="44" methods="59" coveredmethods="33" elements="233" coveredelements="164" complexity="0" loc="122" ncloc="122" packages="24" files="24" classes="24"/>
+    <package name="components.alert">
+      <metrics statements="6" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
+      <file name="alert.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/alert/alert.tsx">
+        <metrics statements="6" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="3"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.aside">
+      <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="aside.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/aside/aside.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.card">
+      <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="card.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/card/card.tsx">
+        <metrics statements="11" coveredstatements="11" conditionals="3" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="28" count="11" type="stmt"/>
+        <line num="30" count="11" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="35" count="11" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="11" type="stmt"/>
+        <line num="53" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.cardList">
+      <metrics statements="12" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="2"/>
+      <file name="cardList.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/cardList/cardList.tsx">
+        <metrics statements="12" coveredstatements="11" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="2"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="42" count="6" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="47" count="9" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.carousel">
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <file name="carousel.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/carousel/carousel.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="9" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.checkbox">
+      <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="4" coveredmethods="4"/>
+      <file name="checkbox.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/checkbox/checkbox.tsx">
+        <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="4" coveredmethods="4"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="50" count="9" type="stmt"/>
+        <line num="51" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="55" count="3" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.checkboxGroup">
+      <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="checkboxGroup.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/checkboxGroup/checkboxGroup.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.dialog">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+      <file name="dialog.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/dialog/dialog.tsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.footer">
+      <metrics statements="3" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <file name="footer.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/footer/footer.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.header">
+      <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="header.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/header/header.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.loader">
+      <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="loader.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/loader/loader.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.logo">
+      <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="logo.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/logo/logo.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.progress">
+      <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="progress.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/progress/progress.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.search">
+      <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="1"/>
+      <file name="search.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/search/search.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="1"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.select">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="select.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/select/select.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.slider">
+      <metrics statements="7" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="2"/>
+      <file name="slider.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/slider/slider.tsx">
+        <metrics statements="7" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="2"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.staticImg">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="staticImg.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/staticImg/staticImg.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.svrnButton">
+      <metrics statements="1" coveredstatements="1" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+      <file name="svrnButton.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/svrnButton/svrnButton.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="36" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.swatch">
+      <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="swatch.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/swatch/swatch.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.switch">
+      <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="1"/>
+      <file name="switch.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/switch/switch.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="1"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.textInput">
+      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="textInput.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/textInput/textInput.tsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.tooltip">
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="tooltip.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/tooltip/tooltip.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.video">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="video.tsx" path="/Users/n1512937/Projects/liberty-ml-home/src/components/video/video.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages">
+      <metrics statements="26" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="14" coveredmethods="0"/>
+      <file name="styleguide.js" path="/Users/n1512937/Projects/liberty-ml-home/src/pages/styleguide.js">
+        <metrics statements="26" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="14" coveredmethods="0"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="73" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="307" count="0" type="stmt"/>
+        <line num="326" count="0" type="stmt"/>
+        <line num="327" count="0" type="stmt"/>
+        <line num="347" count="0" type="stmt"/>
+        <line num="348" count="0" type="stmt"/>
+        <line num="349" count="0" type="stmt"/>
+        <line num="455" count="0" type="stmt"/>
+        <line num="460" count="0" type="stmt"/>
+        <line num="465" count="0" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

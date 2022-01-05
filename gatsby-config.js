@@ -39,6 +39,7 @@ module.exports = {
           'Oxygen\:400,700'
         ],
       },
-    }
+    },
+    "gatsby-plugin-testing"
   ],
 };

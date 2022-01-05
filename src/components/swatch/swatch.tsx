@@ -7,10 +7,16 @@ interface SwatchProps extends PropsWithChildren<any> {
      * Add custom classes to this element.
      */
     classNames?: string
+
+    /**
+     * Assistive label for color description.
+     */
+    label?: string
 }
 
 export function Swatch({
     classNames  = '',
+    label,
     children
 }: SwatchProps): ReactElement {
 
@@ -25,7 +31,7 @@ export function Swatch({
    }
 
     return (
-      <div className={classNames} style={mystyle}>
+      <div className={classNames} style={mystyle} role="img" aria-label={label}>
         {children}
       </div>
     )

@@ -1,8 +1,13 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react'
-import Styleguide from '../../pages/styleguide'
+import { SvrnButton } from "./svrnButton"
 
-describe("Sovereign Button", () => {
+describe("SvrnButton", () => {
+
   it("renders correctly", () => {
+    render(<SvrnButton />)
 
+    const button = document.querySelector('button')
+    expect(button).toBeTruthy()
   })
 })

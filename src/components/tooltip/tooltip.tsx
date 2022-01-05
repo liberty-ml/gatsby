@@ -24,9 +24,9 @@ export function Tooltip({
     return (
 
       <div>
-        <span data-tip data-for="registerTip" className={classnames(styles.dot, styles[inverse], classNames)}></span>
+        <span data-tip data-testid="trigger" data-for="registerTip" className={classnames(styles.dot, styles[inverse], classNames)}></span>
 
-        <ReactTooltip id="registerTip" place="top" effect="solid">
+        <ReactTooltip id="registerTip" place="top" effect="solid" role="tooltip">
           {children}
         </ReactTooltip>
       </div>

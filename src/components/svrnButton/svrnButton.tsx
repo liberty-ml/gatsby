@@ -16,7 +16,7 @@ interface SvrnButtonProps extends PropsWithChildren<any> {
 
     id: string
 
-    inverse: "inverse" | "primary"
+    inverse: "inverse" | "primary" | "gray"
 
     disabled: true | false
 

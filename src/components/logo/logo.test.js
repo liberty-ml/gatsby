@@ -1,8 +1,12 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react'
-import Styleguide from '../../pages/styleguide'
+import { Logo } from './logo'
 
 describe("Logo", () => {
   it("renders correctly", () => {
+    render(<Logo />)
 
+    const logo = screen.getByRole('img')
+    expect(logo).toBeTruthy()
   })
 })

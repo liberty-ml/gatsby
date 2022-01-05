@@ -1,16 +1,16 @@
-.row {
-  margin-bottom: 40px;
+.cards > ul {
+  padding-left: 0px;
+}
+
+@supports (display: grid) {
+    .cards > ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+        grid-gap: 1.5rem;
+    }
 }
 
 button {
   margin: 0px auto !important;
   display: block !important;
-}
-
-.show {
-
-}
-
-.hide {
-  display: none;
 }

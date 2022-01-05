@@ -21,7 +21,7 @@ export function Footer({
 }: FooterProps): ReactElement {
 
     return (
-      <footer className={classnames(styles.footerContainer, classNames)}>
+      <footer className={classnames(styles.footerContainer, classNames)} role="contentinfo">
         <Row>
           <Col lg="3">
             <Row>

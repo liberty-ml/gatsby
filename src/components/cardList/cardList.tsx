@@ -21,7 +21,7 @@ export function CardList({
     children
 }: CardListProps): ReactElement {
   const [state, setState] = useState({
-    counter: 0
+    counter: 2
   })
 
   const increaseCounter = (
@@ -37,31 +37,54 @@ export function CardList({
   let colArray = []
 
    children.forEach(function(element, index) {
+     let show
+     if (index>state.counter) {
+       show = 'hide'
+     } else {
+       show = "show"
+     }
+
      cardArray.push(
-       <Col lg="4" key={index}>
-         <Card header={element.header} link={element.link}>
-           {element.body}
-         </Card>
-        </Col>
+       <Card header={element.header} key={index} link={element.link} classNames={show}>
+          {element.body}
+       </Card>
      )
    })
 
-   for (let  i = 0; i < cardArray.length; i++) {
-     if (i%3===0) {
-       let show = 'hide'
-       if (i-state.counter<3) {
-         show = 'show'
-       }
-       colArray.push(<Row key={i} className={classnames(styles.row, styles[show])}>{cardArray[i]}{cardArray[i+1]}{cardArray[i+2]}</Row>)
-     }
-   }
+/*
+    for (let  i = 0; i < cardArray.length; i++) {
+      children.forEach(function(element, index) {
+        let show
+        if (index%3===0) {
+          show = 'hide'
+          if (index-state.counter<3) {
+            show = 'show'
+          }
+        }
+        cardArray.push(
+          <Card header={element.header} link={element.link}>
+             {element.body}
+          </Card>
+        )
+      })
+     //if (i%3===0) {
+    //   let show = 'hide'
+    //   if (i-state.counter<3) {
+      //   show = 'show'
+      // }
+      // colArray.push(<Row key={i} className={classnames(styles.row, styles[show])}>{cardArray[i]}{cardArray[i+1]}{cardArray[i+2]}</Row>)
+    // }
+    }
+  */
 
     return (
-     <div>
-       {colArray}
-       <SvrnButton size="large" disabled={state.counter+3>=cardArray.length} onClick={increaseCounter}>
-         Show More
-       </SvrnButton>
+      <div className={styles.cards}>
+        <ul>
+          {cardArray}
+        </ul>
+        <SvrnButton size="large" disabled={state.counter+3>=cardArray.length} onClick={increaseCounter}>
+          Show More
+        </SvrnButton>
       </div>
     )
 

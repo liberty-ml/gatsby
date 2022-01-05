@@ -1,0 +1,46 @@
+@import "../../styles/app.scss";
+
+
+.label {
+  visibility: hidden;
+  height: 0px;
+  margin: 0px;
+}
+
+.navButton {
+  float: left;
+  &:first-child {
+    margin-right:20px!important;
+  }
+  background-repeat: no-repeat;
+  background-size: 30px;
+  &.previous {
+    background-position: 10px center;
+    &:not([disabled]) {
+      background-image: url('../../images/chevron-left-white.png');
+    }
+    &:disabled {
+      background-image: url('../../images/chevron-left-gray.png');
+    }
+  }
+  &.next {
+    background-position: 90px center;
+    &:not([disabled]) {
+      background-image: url('../../images/chevron-right-white.png');
+    }
+    &:disabled {
+      background-image: url('../../images/chevron-right-gray.png');
+    }
+  }
+}
+
+.buttonContainer {
+  width:280px;
+  margin:0px auto;
+  float:none;
+}
+
+.slider {
+  min-height:135px;
+  margin-bottom: 20px;
+}

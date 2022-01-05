@@ -1,7 +1,10 @@
-.btnClose {
-  top:5px !important;
-}
-
-button span {
-  display: none;
+.alert {
+  position:fixed!important;
+  top: 20px;
+  right: 20px;
+  min-width: 600px;
+  //display:none;
+  //&.show {
+  //  display: inline-block;
+  //}
 }

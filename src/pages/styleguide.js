@@ -7,6 +7,7 @@ import * as styles from './styleguide.module.scss'
 import { Swatch } from '../components/swatch/swatch'
 import { TextInput } from '../components/textInput/textInput'
 import { Checkbox } from '../components/checkbox/checkbox'
+import { CheckboxGroup } from '../components/checkboxGroup/checkboxGroup'
 import { Select } from '../components/select/select'
 import { Switch } from '../components/switch/switch'
 import { SvrnButton } from '../components/svrnButton/svrnButton'
@@ -18,13 +19,14 @@ import { Loader } from "../components/loader/loader"
 import { Progress } from "../components/progress/progress"
 import { Aside } from "../components/aside/aside"
 import { Card } from "../components/card/card"
-import { Thumbnail } from "../components/thumbnail/thumbnail"
+import { StaticImg } from "../components/staticImg/staticImg"
 import { Video } from "../components/video/video"
 import { CardList } from "../components/cardList/cardList"
-import { SvrnCarousel } from "../components/svrnCarousel/svrnCarousel"
+import { Carousel } from "../components/carousel/carousel"
 import { Header } from "../components/header/header"
 import { Footer } from "../components/footer/footer"
 import { Slider } from "../components/slider/slider"
+import { Dialog } from "../components/dialog/dialog"
 
 
 import { useState, useEffect } from "react";
@@ -32,6 +34,10 @@ import { useState, useEffect } from "react";
 
 export default function Styleguide() {
   const [page, setPage] = useState(null);
+  const [showAlert, setAlert] = useState(false);
+  const [alertType, setAlertType] = useState(null);
+  const [alertMessage, setAlertMessage] = useState(null);
+
 
   useEffect(() => {
     window
@@ -90,6 +96,9 @@ export default function Styleguide() {
 
   return (
     <Container>
+      {showAlert &&
+        <Alert type={alertType} text={alertMessage} hidden={false} showAlert={(idea) => setAlert(idea)} />
+      }
       <Row>
         <Col>
           <h2 style={headerStyle}>Atoms</h2>
@@ -101,47 +110,47 @@ export default function Styleguide() {
       <Row><Col><hr  /></Col></Row>
       <Row style={rowStyle}>
         <Col><h4 className={styles.sectionTitle}>Primary colors</h4></Col>
-        <Col><Swatch classNames={'bg-bright-purple white'}><span>$bright-purple</span><br /><span>#BB80F7</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-light-purple white'}><span>$light-purple</span><br /><span>#A454F6</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-purple white'}><span>$purple</span><br /><span>#8F2BF5</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-dark-purple white'}><span>$dark-purple</span><br /><span>#7E0DF1</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-deep-purple white'}><span>$deep-purple</span><br /><span>#6404C7</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-bright-purple white'} label="Bright Purple"><span>$bright-purple</span><br /><span>#BB80F7</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-light-purple white'} label="Light Purple"><span>$light-purple</span><br /><span>#A454F6</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-purple white'} label="Purple"><span>$purple</span><br /><span>#8F2BF5</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-dark-purple white'} label="Dark Purple"><span>$dark-purple</span><br /><span>#7E0DF1</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-deep-purple white'} label="Deep Purple"><span>$deep-purple</span><br /><span>#6404C7</span></Swatch></Col>
       </Row>
       <Row style={rowStyle}>
         <Col><h4 className={styles.sectionTitle}>Secondary colors</h4></Col>
-        <Col><Swatch classNames={'bg-svn-orange gray-600'}><span>$svn-orange</span><br /><span>#FFCC1C</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-svn-green gray-600'}><span>$svn-green</span><br /><span>#CBFE18</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-svn-orange gray-600'} label="Orange"><span>$svn-orange</span><br /><span>#FFCC1C</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-svn-green gray-600'} label="Green"><span>$svn-green</span><br /><span>#CBFE18</span></Swatch></Col>
         <Col />
         <Col />
         <Col />
       </Row>
       <Row style={rowStyle}>
         <Col><h4 className={styles.sectionTitle}>Grays</h4></Col>
-        <Col><Swatch classNames={'bg-gray-700 white'}><span>$gray-700</span><br /><span>#343741</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-gray-600 white'}><span>$gray-600</span><br /><span>#5D5F67</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-gray-500 white'}><span>$gray-500</span><br /><span>#7D7F86</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-gray-400 gray-600'}><span>$gray-400</span><br /><span>#BEBFC2</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-gray-300 gray-600'}><span>$gray-300</span><br /><span>#DEDFE0</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-gray-700 white'} label="Gray 700"><span>$gray-700</span><br /><span>#343741</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-gray-600 white'} label="Gray 600"><span>$gray-600</span><br /><span>#5D5F67</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-gray-500 white'} label="Gray 500"><span>$gray-500</span><br /><span>#7D7F86</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-gray-400 gray-600'} label="Gray 400"><span>$gray-400</span><br /><span>#BEBFC2</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-gray-300 gray-600'} label="Gray 300"><span>$gray-300</span><br /><span>#DEDFE0</span></Swatch></Col>
       </Row>
       <Row style={rowStyle}>
         <Col />
-        <Col><Swatch classNames={'bg-gray-200 gray-600'}><span>$gray-200</span><br /><span>#EFEFF0</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-gray-100 gray-600'}><span>$gray-100</span><br /><span>#F7F7F8</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-gray-200 gray-600'} label="Gray 200"><span>$gray-200</span><br /><span>#EFEFF0</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-gray-100 gray-600'} label="Gray 100"><span>$gray-100</span><br /><span>#F7F7F8</span></Swatch></Col>
         <Col />
         <Col />
         <Col />
       </Row>
       <Row style={rowStyle}>
         <Col><h4 className={styles.sectionTitle}>System</h4></Col>
-        <Col><Swatch classNames={'bg-red white'}><span>$red</span><br /><span>#D32F2F</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-light-red gray-600'}><span>$light-red</span><br /><span>#FFF4F5</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-green white'}><span>$green</span><br /><span>#008040</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-light-green gray-600'}><span>$light-green</span><br /><span>#E1F2E6</span></Swatch></Col>
-        <Col><Swatch classNames={'bg-yellow white'}><span>$yellow</span><br /><span>#FFD000</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-red white'} label="Red"><span>$red</span><br /><span>#D32F2F</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-light-red gray-600'} label="Light Red"><span>$light-red</span><br /><span>#FFF4F5</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-green white'} label="Green"><span>$green</span><br /><span>#008040</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-light-green gray-600'} label="Light Green"><span>$light-green</span><br /><span>#E1F2E6</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-yellow white'} label="Yellow"><span>$yellow</span><br /><span>#FFD000</span></Swatch></Col>
       </Row>
       <Row>
         <Col />
-        <Col><Swatch classNames={'bg-light-yellow gray-600'}><span>$light-yellow</span><br /><span>#FFF6CC</span></Swatch></Col>
+        <Col><Swatch classNames={'bg-light-yellow gray-600'} label="Light Yellow"><span>$light-yellow</span><br /><span>#FFF6CC</span></Swatch></Col>
         <Col />
         <Col />
         <Col />
@@ -313,8 +322,11 @@ export default function Styleguide() {
           <Row>
             <Col lg="4"><h4 className={styles.sectionTitle}>Checkbox</h4></Col>
             <Col lg="8">
-            <Checkbox type="checkbox" onChange={(value) => console.log(value)}>Default checkbox</Checkbox>
-            <Checkbox type="checkbox" disabled={true}>Disabled checkbox</Checkbox>
+              <CheckboxGroup>
+                <Checkbox type="checkbox" onChange={(value) => console.log(value)}>Option 1</Checkbox>
+                <Checkbox type="checkbox" onChange={(value) => console.log(value)}>Option 2</Checkbox>
+                <Checkbox type="checkbox" disabled={true}>Disabled checkbox</Checkbox>
+              </CheckboxGroup>
             </Col>
           </Row>
         </Col>
@@ -332,8 +344,8 @@ export default function Styleguide() {
           <Row>
             <Col lg="4"><h4 className={styles.sectionTitle}>Radio</h4></Col>
             <Col lg="8">
-            <Checkbox id={"firstDefault"} type="radio" onChange={(value) => console.log(value)} name="radioSet">Checkbox 1</Checkbox>
-            <Checkbox id={"secondDefault"} type="radio" onChange={(value) => console.log(value)} name="radioSet">Checkbox 2</Checkbox>
+            <Checkbox id={"firstDefault"} type="radio" onChange={(value) => console.log(value)} name="radioSet">Radio 1</Checkbox>
+            <Checkbox id={"secondDefault"} type="radio" onChange={(value) => console.log(value)} name="radioSet">Radio 2</Checkbox>
             <Checkbox id={"secondDefault"} type="radio" onChange={(value) => console.log(value)} disabled={true} name="radioSet">Checkbox 2</Checkbox>
             </Col>
           </Row>
@@ -437,10 +449,34 @@ export default function Styleguide() {
         <Col lg="12">
           <Row>
             <Col lg="2"><h4 className={styles.sectionTitle}>Alerts</h4></Col>
-            <Col lg="10">
-              <Alert type="success">This is a success alert</Alert>
-              <Alert type="danger">This is a danger alert</Alert>
-              <Alert type="warning">This is a warning alert</Alert>
+            <Col lg="1">
+              <Row  style={rowStyle}>
+                <Col lg="12">
+                  <SvrnButton size="small" onClick={function(event){ setAlert(true); setAlertType('success'); setAlertMessage('Your action was successful.')}}>Success</SvrnButton>
+                </Col>
+              </Row>
+              <Row style={rowStyle}>
+                <Col lg="12">
+                  <SvrnButton size="small" onClick={function(event){ setAlert(true); setAlertType('danger'); setAlertMessage("What you're doing is very bad.")}}>Danger</SvrnButton>
+                </Col>
+              </Row>
+              <Row style={rowStyle}>
+                <Col lg="12">
+                  <SvrnButton size="small" onClick={function(event){ setAlert(true); setAlertType('warning'); setAlertMessage('This is a warning. Be careful!')}}>Warning</SvrnButton>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row style={rowStyle}>
+        <Col lg="6">
+          <Row>
+            <Col lg="4"><h4 className={styles.sectionTitle}>Alert Dialog</h4></Col>
+            <Col lg="2">
+              <Dialog confirmText="I'm good!" launchText="Delete" heading="Item delete" inverse="primary">
+                Are you sure you want to delete this?
+              </Dialog>
             </Col>
           </Row>
         </Col>
@@ -484,9 +520,9 @@ export default function Styleguide() {
             </Col>
           </Row>
           <Row style={rowStyle}>
-            <Col lg="4"><h4 className={styles.sectionTitle}>Thumbnail</h4></Col>
+            <Col lg="4"><h4 className={styles.sectionTitle}>Static Image</h4></Col>
             <Col lg="8">
-              <Thumbnail src='headshot.jpg' alt="headshot" targetId="thumbnail-1" link="/#">This is a tooltip</Thumbnail>
+              <StaticImg />
             </Col>
           </Row>
         </Col>
@@ -524,9 +560,9 @@ export default function Styleguide() {
           <Row>
             <Col lg="2"><h4 className={styles.fullSectionTitle}>Carousel</h4></Col>
             <Col lg="4">
-              <SvrnCarousel>
+              <Carousel>
                 {cardArray}
-              </SvrnCarousel>
+              </Carousel>
             </Col>
           </Row>
         </Col>
@@ -563,3 +599,24 @@ export default function Styleguide() {
     </Container>
   )
 }
+
+
+
+/*
+<Row>
+  <Col lg="4"><h4 className={styles.sectionTitle}>Dialog</h4></Col>
+  <Col lg="8">
+    <Dialog confirmText="I accept!" launchText="Review" heading="Terms and conditions" inverse="primary">
+      Skateboard mumblecore tote bag street art esse in non paleo brunch, quis sriracha. Hot chicken ut fam excepteur tofu squid snackwave migas in +1 gluten-free hexagon officia laboris. Wayfarers tote bag bespoke keffiyeh proident veniam forage. Est fam laboris actually live-edge. Velit subway tile proident, lyft glossier taxidermy eu.
+
+      Vape est franzen, biodiesel chia mlkshk salvia polaroid heirloom qui glossier stumptown. Ad eiusmod commodo austin flannel sint. Fam sartorial master cleanse umami trust fund gluten-free ennui green juice pitchfork art party gochujang. Vaporware hot chicken offal do photo booth VHS lo-fi. Ennui shabby chic irony meggings actually flannel cliche ut minim echo park freegan cold-pressed marfa. Pabst pickled letterpress freegan fanny pack eiusmod next level kombucha. Letterpress kinfolk franzen gastropub.
+
+      Skateboard humblebrag master cleanse literally cold-pressed godard gochujang pop-up. Biodiesel hell of pop-up aesthetic, deep v blog wayfarers brunch lumbersexual qui. Seitan enim nisi meditation. Cillum messenger bag ramps incididunt chia. Green juice fam asymmetrical culpa offal ennui. Ad retro adaptogen palo santo flannel activated charcoal sunt kinfolk copper mug la croix taxidermy reprehenderit. In umami ramps mumblecore selvage mixtape synth tumeric brunch.
+
+      90's street art anim mollit. Godard +1 marfa scenester iPhone, esse YOLO. Quis actually chambray umami hexagon, est migas four loko selvage mumblecore helvetica dolore. Fingerstache ex direct trade quis tempor wolf aute ethical banjo duis seitan single-origin coffee. Ramps messenger bag art party pork belly pinterest. Gochujang chartreuse 90's flannel, vaporware minim knausgaard enim pop-up culpa incididunt. Id scenester mollit prism anim neutra glossier banh mi.
+
+      Snackwave la croix sriracha meditation single-origin coffee lyft paleo ugh farm-to-table salvia excepteur. Biodiesel twee +1 tacos mumblecore culpa. Meh sustainable keytar mlkshk lumbersexual. Consequat iPhone semiotics bespoke lorem, tofu quis laborum af chartreuse trust fund.
+    </Dialog>
+  </Col>
+</Row>
+*/

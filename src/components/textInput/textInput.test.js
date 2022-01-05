@@ -1,8 +1,13 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react'
-import Styleguide from '../../pages/styleguide'
+import { TextInput } from "./textInput"
 
 describe("Text Input", () => {
-  it("renders correctly", () => {
 
+  it("renders correctly", () => {
+    render(<TextInput />)
+
+    const input = document.querySelector('input')
+    expect(input).toBeTruthy()
   })
 })

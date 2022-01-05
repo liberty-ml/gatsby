@@ -17,7 +17,7 @@ export function Loader({
 }: LoaderProps): ReactElement {
 
     return (
-      <div data-title=".dotPulse">
+      <div data-title=".dotPulse" role="alert" aria-busy="true">
         <div className={styles.stage}>
           <div className={styles.dotPulse}></div>
         </div>
